@@ -16,9 +16,9 @@ export default class HomeScreen extends React.Component {
     return (
 
       <Container>
-        <Header style={{backgroundColor:'#0066ff'}}>
+        <Header style={{backgroundColor:'#32a83a'}}>
             <View style={{alignItems:"flex-start",margin:10}}>
-              <StatusBar backgroundColor="#0066ff" barStyle="light-content" />
+              <StatusBar backgroundColor="#32a83a" barStyle="light-content" />
               <Icon name="bars" style={{ marginTop:3,fontSize:24,color: "white" }} onPress={() =>
               this.props.navigation.openDrawer()} />
             </View>
@@ -26,19 +26,20 @@ export default class HomeScreen extends React.Component {
             <View style={{flex:1,marginTop:10,marginLeft:140}}>
               <Text style={{color:"white",fontSize:20}}>Janani</Text>
             </View>
-         </Header>
+        </Header>
          <Image
           style={{width: 100, height: 170, alignSelf:"center",marginTop:35}}
           source={{uri: 'https://www.wpclipart.com/people/female/pregnant/Pregnant_Woman_pink.png'}}
         />
-         <View style={{marginTop:20,marginBottom:150}}>
-           <Text style={{color:"black",fontSize:30,textAlign:"center",marginLeft:20,marginRight:20}}>
+
+        <View style={{marginTop:20,marginBottom:150}}>
+          <Text style={{color:"black",fontSize:30,textAlign:"center",marginLeft:20,marginRight:20}}>
            "Using this, we are trying to take a small step towards the betterment of women undergoing this beautiful process of childbirth."
-           </Text>
-         </View>
-         <View style={{flex:1, backgroundColor: '#f3f3f3'}}>
-        {/* Rest of the app comes ABOVE the action button component !*/}
-        <ActionButton buttonColor="rgba(231,76,60,1)">
+          </Text>
+        </View>
+        <View style={{flex:1, backgroundColor: '#f3f3f3'}}>
+        
+          <ActionButton buttonColor="rgba(231,76,60,1)">
           <ActionButton.Item buttonColor='red' title="Alert Family Memebers" onPress={() => console.log("notes tapped!")}>
             <Icon name="exclamation" style={styles.actionButtonIcon} />
           </ActionButton.Item>
@@ -47,14 +48,10 @@ export default class HomeScreen extends React.Component {
           </ActionButton.Item>
           
         </ActionButton>
-      </View>
+        </View>
 
        </Container>
         
-      
-      
-     
-      
     );
   }
 }
